@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "1d4e6997-bd9f-4d85-a6d8-aa288737271e",
+		"name": "Search",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46505107",
+		"_collection_link": "https://grupo12-2692.postman.co/workspace/ProyectoFinal~e824360a-d8c3-4fdc-aa28-20282ad59b49/collection/11818429-1d4e6997-bd9f-4d85-a6d8-aa288737271e?action=share&source=collection_link&creator=46505107"
+	},
+	"item": [
+		{
+			"name": "BusquedaExitosaCancion",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "1250484cc9e149eda0e9774331610eab",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "067885cf77f3455eab8e289aa40e2535",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/search?q=Shape&type=track",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Shape"
+						},
+						{
+							"key": "type",
+							"value": "track"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BusquedaTokenInvalido",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ABC123FAKETOKEN",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/search?q=Shakira&type=track",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Shakira"
+						},
+						{
+							"key": "type",
+							"value": "track"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BusquedaArtistaEspecifico",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "1250484cc9e149eda0e9774331610eab",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "067885cf77f3455eab8e289aa40e2535",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/search?q=Beyonce&type=artist",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Beyonce"
+						},
+						{
+							"key": "type",
+							"value": "artist"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SolicitudSinParametroq",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "1250484cc9e149eda0e9774331610eab",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "067885cf77f3455eab8e289aa40e2535",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/search?type=track",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"search"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "track"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

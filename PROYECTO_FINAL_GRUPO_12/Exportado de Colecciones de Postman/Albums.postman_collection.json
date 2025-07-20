@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "2df0b13e-27e4-44ea-8025-3cdb569dbbc8",
+		"name": "Albums",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46505107",
+		"_collection_link": "https://grupo12-2692.postman.co/workspace/ProyectoFinal~e824360a-d8c3-4fdc-aa28-20282ad59b49/collection/46826721-2df0b13e-27e4-44ea-8025-3cdb569dbbc8?action=share&source=collection_link&creator=46505107"
+	},
+	"item": [
+		{
+			"name": "GuardarAlbunFavorito",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "1250484cc9e149eda0e9774331610eab",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "067885cf77f3455eab8e289aa40e2535",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"ids\": [\"4aawyAB9vmqN3uQ7FjRGTy\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/albums",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"albums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InformacionVariosAlbunes",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "1250484cc9e149eda0e9774331610eab",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "067885cf77f3455eab8e289aa40e2535",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/albums?ids=382ObEPsp2rxGrnsizN5TX,1ATL5GLyefJaxhQzSPVrLX",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"albums"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "382ObEPsp2rxGrnsizN5TX,1ATL5GLyefJaxhQzSPVrLX"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerificarAlbunGuardado",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/albums/contains?ids=4aawyAB9vmqN3uQ7FjRGTy",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"albums",
+						"contains"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "4aawyAB9vmqN3uQ7FjRGTy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminaAlbunGuardado",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"ids\": [\"4aawyAB9vmqN3uQ7FjRGTy\"] \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/albums",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"albums"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Toque",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "your-client-id",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "your-client-secret",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://accounts.spotify.com/api/token",
+					"protocol": "https",
+					"host": [
+						"accounts",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"api",
+						"token"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \"https://accounts.spotify.com/api/token\" \\\r\n     -H \"Content-Type: application/x-www-form-urlencoded\" \\\r\n     -d \"grant_type=client_credentials&client_id=your-client-id&client_secret=your-client-secret\"\r\n"
+			},
+			"response": []
+		}
+	]
+}

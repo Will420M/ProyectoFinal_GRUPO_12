@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "2a0a7e1a-0d7f-4672-b3bf-f26c45c547e1",
+		"name": "Play",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46505107",
+		"_collection_link": "https://grupo12-2692.postman.co/workspace/ProyectoFinal~e824360a-d8c3-4fdc-aa28-20282ad59b49/collection/46505107-2a0a7e1a-0d7f-4672-b3bf-f26c45c547e1?action=share&source=collection_link&creator=46505107"
+	},
+	"item": [
+		{
+			"name": "SaltarSiguiente403",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1POdFZRZbvb...qqillRxMr2z"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/player/next",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"player",
+						"next"
+					]
+				},
+				"description": "Generated from cURL: curl --request POST \\\r\n  --url https://api.spotify.com/v1/me/player/next \\\r\n  --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'"
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerEstadoReproduccionesPositivo204",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1POdFZRZbvb...qqillRxMr2z"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/player",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"player"
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\r\n  --url https://api.spotify.com/v1/me/player \\\r\n  --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'"
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerEstadoReproduccionesNegativo401",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1POdFZRZbvb...qqillRxMr2z"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/player",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"player"
+					]
+				},
+				"description": "Generated from cURL: curl --request GET \\\r\n  --url https://api.spotify.com/v1/me/player \\\r\n  --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'"
+			},
+			"response": []
+		},
+		{
+			"name": "ReproduccionTransferidaNegativo403",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1POdFZRZbvb...qqillRxMr2z"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"device_ids\": [\r\n        \"74ASZWbe4lXaubB36ztrGX\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/player",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"player"
+					]
+				},
+				"description": "Generated from cURL: curl --request PUT \\\r\n  --url https://api.spotify.com/v1/me/player \\\r\n  --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z' \\\r\n  --header 'Content-Type: application/json' \\\r\n  --data '{\r\n    \"device_ids\": [\r\n        \"74ASZWbe4lXaubB36ztrGX\"\r\n    ]\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "PausarReproduccionNegativo401",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 1POdFZRZbvb...qqillRxMr2z"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/player/pause",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"player",
+						"pause"
+					]
+				},
+				"description": "Generated from cURL: curl --request PUT \\\r\n  --url https://api.spotify.com/v1/me/player/pause \\\r\n  --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'"
+			},
+			"response": []
+		}
+	]
+}

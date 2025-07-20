@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "1d8c0af4-10c4-49c5-a345-a4b9426611df",
+		"name": "Categories",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46505107",
+		"_collection_link": "https://grupo12-2692.postman.co/workspace/ProyectoFinal~e824360a-d8c3-4fdc-aa28-20282ad59b49/collection/11818429-1d8c0af4-10c4-49c5-a345-a4b9426611df?action=share&source=collection_link&creator=46505107"
+	},
+	"item": [
+		{
+			"name": "offsetNegativo",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "89e6caf986544ee0b5ba4cdb4bb2e25a",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "5c89637cbdfb4e67a1f58251e4d4209f",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token1",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/browse/categories?offset=-10\n",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"browse",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "-10\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerCategoriaFueraRango",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "89e6caf986544ee0b5ba4cdb4bb2e25a",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "5c89637cbdfb4e67a1f58251e4d4209f",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token1",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/browse/categories?limit=100\n",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"browse",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "100\n"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerCategorias",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "89e6caf986544ee0b5ba4cdb4bb2e25a",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "5c89637cbdfb4e67a1f58251e4d4209f",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token1",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/browse/categories",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"browse",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerCategoriaPorId",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "89e6caf986544ee0b5ba4cdb4bb2e25a",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "5c89637cbdfb4e67a1f58251e4d4209f",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token1",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/browse/categories/{{category_id}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"browse",
+						"categories",
+						"{{category_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

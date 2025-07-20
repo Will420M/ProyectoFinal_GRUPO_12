@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "255f04e3-1146-4016-90f7-885092b5a458",
+		"name": "Artists",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46505107",
+		"_collection_link": "https://grupo12-2692.postman.co/workspace/ProyectoFinal~e824360a-d8c3-4fdc-aa28-20282ad59b49/collection/46881906-255f04e3-1146-4016-90f7-885092b5a458?action=share&source=collection_link&creator=46505107"
+	},
+	"item": [
+		{
+			"name": "OntencionMejoresCancionesDeArtista",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "token2",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "58953b4bb80e4875ad871997f2678036",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cceb96415a5c4f11923f5b26475b7045",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/v1/artists/-id-/top-tracks?id=3TVXtAsR1Inumwj472S9r4&market=",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"-id-",
+						"top-tracks"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3TVXtAsR1Inumwj472S9r4"
+						},
+						{
+							"key": "market",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtencionAlbumDeArtista",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "58953b4bb80e4875ad871997f2678036",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cceb96415a5c4f11923f5b26475b7045",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token3",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/v1/artists/{id}/albums?id=5JMJt80HJWR1e4hMw63Z5t&include_groups=single&market=ES&limit=11&offset=7",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"{id}",
+						"albums"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5JMJt80HJWR1e4hMw63Z5t"
+						},
+						{
+							"key": "include_groups",
+							"value": "single"
+						},
+						{
+							"key": "market",
+							"value": "ES"
+						},
+						{
+							"key": "limit",
+							"value": "11"
+						},
+						{
+							"key": "offset",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "https://api.spotify.com",
+			"type": "default"
+		}
+	]
+}

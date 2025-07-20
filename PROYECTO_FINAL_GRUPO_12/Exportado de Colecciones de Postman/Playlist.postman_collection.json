@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "bab8896d-61ee-4279-81bd-4b4e1538116a",
+		"name": "Playlist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46505107",
+		"_collection_link": "https://grupo12-2692.postman.co/workspace/ProyectoFinal~e824360a-d8c3-4fdc-aa28-20282ad59b49/collection/11818429-bab8896d-61ee-4279-81bd-4b4e1538116a?action=share&source=collection_link&creator=46505107"
+	},
+	"item": [
+		{
+			"name": "obtenerPlaylists",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/playlists",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerTOken",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "CrearPlaylist",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "89e6caf986544ee0b5ba4cdb4bb2e25a",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "5c89637cbdfb4e67a1f58251e4d4209f",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token1",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Música para estudiar\",\r\n  \"description\": \"Canciones para concentración\",\r\n  \"public\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/users/{{user_id}}/playlists",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"users",
+						"{{user_id}}",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerId",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "89e6caf986544ee0b5ba4cdb4bb2e25a",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "5c89637cbdfb4e67a1f58251e4d4209f",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token1",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/me",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarTracks",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "89e6caf986544ee0b5ba4cdb4bb2e25a",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "5c89637cbdfb4e67a1f58251e4d4209f",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token1",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"uris\": [\r\n    \"spotify:track:6rqhFgbbKwnb9MLmUQDhG6\",\r\n    \"spotify:track:4iV5W9uYEdYUVa79Axb7Rh\"\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/playlists/{{playlist_id}}/tracks",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"playlists",
+						"{{playlist_id}}",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crearPlaylistSinNombre",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "89e6caf986544ee0b5ba4cdb4bb2e25a",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "5c89637cbdfb4e67a1f58251e4d4209f",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token1",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/users/{{user_id}}/playlists",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"users",
+						"{{user_id}}",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarPlaylistInexistente",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "89e6caf986544ee0b5ba4cdb4bb2e25a",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "5c89637cbdfb4e67a1f58251e4d4209f",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "token1",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/playlists/{{invalid_playlistID}}/followers",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"playlists",
+						"{{invalid_playlistID}}",
+						"followers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

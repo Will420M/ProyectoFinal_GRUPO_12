@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "9bab0f82-4f5a-46d8-805c-cc48affd8a92",
+		"name": "Tracks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46505107",
+		"_collection_link": "https://grupo12-2692.postman.co/workspace/ProyectoFinal~e824360a-d8c3-4fdc-aa28-20282ad59b49/collection/46826721-9bab0f82-4f5a-46d8-805c-cc48affd8a92?action=share&source=collection_link&creator=46505107"
+	},
+	"item": [
+		{
+			"name": "ObtenerDetallesPista",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/tracks/?ids=11dFghVXANMlKmJXsNCbNl",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"tracks",
+						""
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "11dFghVXANMlKmJXsNCbNl"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultarPistaIdInvalido",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/tracks/?ids=12345asdfDSAC32",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"tracks",
+						""
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "12345asdfDSAC32"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GuardarPista",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/tracks?ids=3KkXRkHbMCARz0aVfEt68P",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"tracks"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "3KkXRkHbMCARz0aVfEt68P"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarPistaGuardada",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/tracks?ids=3KkXRkHbMCARz0aVfEt68P",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"tracks"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "3KkXRkHbMCARz0aVfEt68P"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

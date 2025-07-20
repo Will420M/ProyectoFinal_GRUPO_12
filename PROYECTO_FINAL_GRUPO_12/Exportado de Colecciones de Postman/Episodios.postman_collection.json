@@ -1,0 +1,413 @@
+{
+	"info": {
+		"_postman_id": "402e171d-1915-4d00-b32e-75e56718dbdc",
+		"name": "Episodios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46505107",
+		"_collection_link": "https://grupo12-2692.postman.co/workspace/ProyectoFinal~e824360a-d8c3-4fdc-aa28-20282ad59b49/collection/46881906-402e171d-1915-4d00-b32e-75e56718dbdc?action=share&source=collection_link&creator=46505107"
+	},
+	"item": [
+		{
+			"name": "ObtenerInformacionDeEpisodio",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "token2",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "58953b4bb80e4875ad871997f2678036",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cceb96415a5c4f11923f5b26475b7045",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Id",
+						"value": "5XvKimawmFIiJfe93PTd1u",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.spotify.com/v1/episodes/5XvKimawmFIiJfe93PTd1u",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"episodes",
+						"5XvKimawmFIiJfe93PTd1u"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerInformacionEpisodioNoValido",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "token2",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "58953b4bb80e4875ad871997f2678036",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cceb96415a5c4f11923f5b26475b7045",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/episodes/512ojhOuo1ktJprKbVcKyQ?id=512ojhOuo1ktJprKbVcKyQ?id",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"episodes",
+						"512ojhOuo1ktJprKbVcKyQ"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "512ojhOuo1ktJprKbVcKyQ?id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerEpisodiosGuardadosDatosFueraDeRango",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "token2",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "58953b4bb80e4875ad871997f2678036",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cceb96415a5c4f11923f5b26475b7045",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/episodes?market=ES&limit=51&offset=0",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"episodes"
+					],
+					"query": [
+						{
+							"key": "market",
+							"value": "ES"
+						},
+						{
+							"key": "limit",
+							"value": "51"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OntenerEpisodiosDatosDetroDeRango",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "token2",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "58953b4bb80e4875ad871997f2678036",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cceb96415a5c4f11923f5b26475b7045",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/episodes?market=ES&limit=20&offset=5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"episodes"
+					],
+					"query": [
+						{
+							"key": "market",
+							"value": "ES"
+						},
+						{
+							"key": "limit",
+							"value": "20"
+						},
+						{
+							"key": "offset",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerVaiosEpisodiosconDatosValidos",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "token2",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "user-library-read user-library-modify playlist-read-private playlist-modify-public user-read-email user-read-private user-read-playback-position user-read-playback-state user-read-currently-playing user-modify-playback-state user-read-recently-played playlist-modify-private playlist-read-collaborative ugc-image-upload user-follow-read user-follow-modify",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "58953b4bb80e4875ad871997f2678036",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "cceb96415a5c4f11923f5b26475b7045",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/episodes?ids=5Xt5DXGzch68nYYamXrNxZ,0jliC3UEA0vTscepW47d1G&market=ES",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"episodes"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "5Xt5DXGzch68nYYamXrNxZ,0jliC3UEA0vTscepW47d1G"
+						},
+						{
+							"key": "market",
+							"value": "ES"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GuardarEpisodios",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "tokenName",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/me/episodes?id=5XvKimawmFIiJfe93PTd1u",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"me",
+						"episodes"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5XvKimawmFIiJfe93PTd1u"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
